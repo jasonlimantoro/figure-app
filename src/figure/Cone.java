@@ -11,9 +11,9 @@ public class Cone extends Shape
     {
         super(dimensions);
         this.base = new Circle(radius, dimensions);
-        this.slant = Math.sqrt(Math.pow(this.height, 2) + Math.pow(this.radius, 2));
         this.radius = radius;
         this.height = height;
+        this.slant = Math.sqrt(Math.pow(this.height, 2) + Math.pow(this.radius, 2));
     }
 
     public double calculateArea()
