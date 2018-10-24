@@ -2,8 +2,7 @@ package figure;
 
 public class Circle extends Shape
 {
-    private double radius;
-    private static final double PI = Math.PI;
+    protected double radius;
 
     Circle(double radius, int dimensions)
     {
@@ -13,6 +12,6 @@ public class Circle extends Shape
 
     public double calculateArea()
     {
-        return PI * this.radius * this.radius;
+        return Math.PI * this.radius * this.radius;
     }
 }

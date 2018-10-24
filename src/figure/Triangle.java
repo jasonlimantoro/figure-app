@@ -2,7 +2,7 @@ package figure;
 
 public class Triangle extends Shape
 {
-    private double height, base;
+    protected double height, base;
 
     public Triangle(double height, double base, int dimensions)
     {
