@@ -21,6 +21,8 @@ public class Shape3DApp
     		System.out.println("4. Sphere");
     		System.out.println("5. Square-based pyramid");
     		System.out.println("6. Cuboid");
+    		System.out.println("7. Cone");
+    		System.out.println("8. Cylinder");
     		System.out.print("Please choose the shapes(1-6): ");
     		int op=sc.nextInt();
     		if(op==1)
@@ -81,10 +83,30 @@ public class Shape3DApp
     			int d=sc.nextInt();
     			shapes.add(new Cuboid(new Rectangle(l,b,d-1), new Rectangle(b,h,d-1),new Rectangle(l,h,d-1),d));
     		}
+    		else if(op==7)
+    		{
+    			System.out.print("Enter radius: ");
+    			int r=sc.nextInt();
+    			System.out.print("Enter height: ");
+    			int h=sc.nextInt();
+    			System.out.print("Enter dimension: ");
+    			int d=sc.nextInt();
+    			shapes.add(new Cone(r,h,d));
+    		}
+    		else if(op==8)
+    		{
+    			System.out.print("Enter radius: ");
+    			int r=sc.nextInt();
+    			System.out.print("Enter height: ");
+    			int h=sc.nextInt();
+    			System.out.print("Enter dimension: ");
+    			int d=sc.nextInt();
+    			shapes.add(new Cylinder(r,h,d));
+    		}
     		
     		totalArea+=shapes.get(x).calculateArea();
     	}
-    	System.out.println("Calculated area of 2D figure: "+totalArea);
+    	System.out.println("Calculated area of 3D figure: "+totalArea);
     	
     }
 }
@@ -97,4 +119,10 @@ Test case example:
 6 10 20 30 3
 
 Ans: 1256.637(4*PI*10*10) + 800(20*20+4*10*20/2) + 2200(10*20*2+10*30*2+20*30*2) = 4256.637
+
+2 
+7 10 10 3
+8 10 10 3
+
+Ans: 758.448(10*10*pi) +1256.64(10*10*pi+10*10*2*pi) =1570.7963
 */
