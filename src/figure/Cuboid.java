@@ -6,7 +6,7 @@ public class Cuboid extends Shape
     protected Rectangle top;
     protected Rectangle front;
 
-    public Cuboid(int dimensions, Rectangle side, Rectangle top, Rectangle front)
+    public Cuboid(Rectangle side, Rectangle top, Rectangle front, int dimensions)
     {
         super(dimensions);
         this.side = side;

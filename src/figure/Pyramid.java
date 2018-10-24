@@ -5,7 +5,7 @@ public class Pyramid extends Shape
     private Triangle perimeters;
     private Rectangle base;
 
-    public Pyramid(int dimensions, Triangle perimeters, Rectangle base)
+    public Pyramid(Triangle perimeters, Rectangle base,int dimensions)
     {
         super(dimensions);
         this.perimeters = perimeters;
