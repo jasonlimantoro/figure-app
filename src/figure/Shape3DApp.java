@@ -23,7 +23,7 @@ public class Shape3DApp
     		System.out.println("6. Cuboid");
     		System.out.println("7. Cone");
     		System.out.println("8. Cylinder");
-    		System.out.print("Please choose the shapes(1-6): ");
+    		System.out.print("Please choose the shapes(1 - 8): ");
     		int op=sc.nextInt();
     		if(op==1)
     		{
