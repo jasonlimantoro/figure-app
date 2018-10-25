@@ -2,19 +2,18 @@ package figure;
 
 public class Cuboid extends Shape
 {
-    protected Rectangle side;
-    protected Rectangle top;
-    protected Rectangle front;
+    private Rectangle side;
+    private Rectangle top;
+    private Rectangle front;
 
-    public Cuboid(Rectangle side, Rectangle top, Rectangle front, int dimensions)
+    public Cuboid(double length, double breadth, double height, int dimensions)
     {
         super(dimensions);
-        this.side = side;
-        this.top = top;
-        this.front = front;
+        this.side = new Rectangle(breadth, height, dimensions - 1);
+        this.top = new Rectangle(length, breadth, dimensions - 1);
+        this.front = new Rectangle(length, height, dimensions - 1);
     }
 
-    @Override
     public double calculateArea()
     {
         return 2 * side.calculateArea() + 2 * top.calculateArea() + 2 * front.calculateArea();

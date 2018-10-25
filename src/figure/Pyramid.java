@@ -5,11 +5,11 @@ public class Pyramid extends Shape
     private Triangle perimeters;
     private Rectangle base;
 
-    public Pyramid(Triangle perimeters, Rectangle base,int dimensions)
+    public Pyramid(double perimeterHeight, double baseSide, int dimensions)
     {
         super(dimensions);
-        this.perimeters = perimeters;
-        this.base = base;
+        this.base = new Rectangle(baseSide, baseSide, dimensions - 1);
+        this.perimeters = new Triangle(perimeterHeight, baseSide, dimensions - 1);
     }
 
     public double calculateArea()

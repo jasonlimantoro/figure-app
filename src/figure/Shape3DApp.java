@@ -69,7 +69,7 @@ public class Shape3DApp
     			int l=sc.nextInt();
     			System.out.print("Enter dimension: ");
     			int d=sc.nextInt();
-    			shapes.add(new Pyramid(new Triangle(h,l,d-1), new Rectangle(l,l,d-1), d));
+    			shapes.add(new Pyramid(h, l, d));
     		}
     		else if(op==6)
     		{
@@ -81,7 +81,7 @@ public class Shape3DApp
     			int h=sc.nextInt();
     			System.out.print("Enter dimension: ");
     			int d=sc.nextInt();
-    			shapes.add(new Cuboid(new Rectangle(l,b,d-1), new Rectangle(b,h,d-1),new Rectangle(l,h,d-1),d));
+    			shapes.add(new Cuboid(l, b, h ,d));
     		}
     		else if(op==7)
     		{
